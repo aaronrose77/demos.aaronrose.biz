@@ -1,0 +1,13 @@
+/* Import normalize stylesheets */
+@import "normalize";
+
+/* Begin main site styles */
+h1 {
+  
+}
+.main {
+	background-image: url("/images/bg-monitor.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}

@@ -1,0 +1,49 @@
+{
+  "name": "demos.aaronrose.biz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserslist": [
+    "> 5%",
+    "last 2 versions"
+  ],
+  "scripts": {
+    "uglify": "mkdirp dist/js && uglifyjs src/js/svg4everybody.js src/js/app.js -m -o dist/js/app.min.js",
+    "imagemin": "imagemin src/images/* -o dist/images",
+    "icons": "svgo -f src/images/icons && mkdirp dist/images/ && svg-sprite-generate -d src/images/icons -o dist/images/icons.svg",
+    "serve": "browser-sync start --proxy local.demos.aaronrose.biz/dist --files dist",
+    "scss": "node-sass --output-style nested -o dist/css/*.scss src/scss -w",
+    "hashmark": "hashmark -l 8 dist/css/main.css dist/css/main.{hash}.css",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
+    "lint": "eslint src/js/app.js || true",
+    "clean:js": "rimraf dist/js",
+    "clean:css": "rimraf dist/css",
+    "clean": "npm run clean:js && npm run clean:css",
+    "build:html": "",
+    "build:js": "npm run lint && npm run uglify",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:images": "npm run imagemin",
+    "build:watch": "watch 'npm run build' .",
+    "build": "npm run clean && npm run build:js && npm run build:css",
+    "postbuild": "npm run serve"
+  },
+  "author": "Aaron Rose",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "browser-sync": "^2.18.6",
+    "browserslist": "^1.7.1",
+    "cssmin": "^0.4.3",
+    "eslint": "^3.13.1",
+    "hashmark": "^4.1.0",
+    "imagemin-cli": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.2.0",
+    "postcss-cli": "^2.6.0",
+    "rimraf": "^2.5.4",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^0.7.1",
+    "uglify-js": "^2.7.5",
+    "watch": "^1.0.1"
+  }
+}
