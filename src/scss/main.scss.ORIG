@@ -1,0 +1,412 @@
+/* Import normalize stylesheets */
+
+@import "normalize.min";
+@import "base";
+@import "grid";
+@import "icons";
+
+
+/* The following code will not show up in the document, but will let 
+/* JavaScript know which breakpoint is currently being used.
+/* Source: https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript */
+
+body:before {
+  content: "mobile";
+  display: none;
+}
+@media (min-width: 40em) {
+  body:before {
+    content: "tablet";
+  }
+}
+@media (min-width: 64em) {
+  body:before {
+    content: "desktop";
+  }
+}
+
+
+/****************************
+****** Global Styles ********
+****************************/
+html {
+  background-image: url(../images/striped-pattern.png);
+  background-repeat: repeat-x;
+  background-size: auto 20rem;
+  background-color: #EEE;
+  text-align: center;
+}
+
+html:before {
+  /*
+  position: absolute;
+  height: 10rem;
+  width: 100%;
+  z-index: -1;
+  content: "";
+  display: block;
+ */
+}
+.box {
+  background: #adadad;
+  display: block;
+  width: 100%;
+  height: 10rem;
+  color: #FFF;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: inherit;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility; 
+}
+
+a {
+  color: #0067b4;
+}
+section .heading,
+.section .heading {
+  position: relative;
+  font-weight: normal;
+}
+section .heading:before,
+.section .heading:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #40c0b1;
+  text-align: center;
+  bottom: -2rem;
+  left: 50%;
+  margin: 0 0 0 -50px;
+}
+
+section .subheading,
+.section .subheading {
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+/*****************************
+******* Navbar  Styles *******
+*****************************/
+.topbar {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #FFF;
+  min-height: 3rem;
+}
+.topbar .menu-trigger {
+  position: absolute;
+  right: 0;
+  min-height: 3rem;
+  cursor: pointer; 
+}
+.topbar .menu-trigger:before,
+.topbar .menu-trigger:after {
+  content: "";
+  font-size: 1.2rem;
+  color: #0067b4;
+  font-weight: bold;
+  width: 3em;
+  line-height: 1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -0.8rem;
+  z-index: 2;
+  display:block;
+}
+.topbar .menu-trigger:before {
+  content: "Menu";
+  text-transform: uppercase;
+  font-size: .5rem;
+  margin-top: 0.6rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+.topbar .menu-trigger:after {
+  content: "☰";
+}
+.topbar.open .menu-trigger:after {
+  content: "X"; 
+}
+.topbar .navmenu .item {
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+  text-decoration: none;
+  flex: 0 0 auto;
+  user-select: none;
+  padding: 0.9375rem;
+  display: none;
+}
+.topbar .navmenu .item.login {
+  display: inherit;
+  position: relative;
+  color: #0079c2;
+  top: 0;
+}
+.topbar .navmenu .right.menu {
+  float: left;
+}
+
+.topbar.open .navmenu {
+  position: absolute;
+  background-color: #0079c2;
+  width: 100%;
+  text-align: left;
+  top: 3rem;
+}
+.topbar.open .navmenu .item {
+  display: block;
+  color: #FFF;
+}
+.topbar.open .navmenu .item.login {
+  position: absolute;
+  top: -3rem;
+  color: #0067b4;
+}
+
+@media print, screen and (min-width: 40em) {
+  .topbar {
+    background-color: #FFF;
+  }
+  .topbar:before,
+  .topbar:after {
+    display:none;
+  }
+  .topbar .container {
+    //padding-right: 0.9375rem;
+    //padding-left: 0.9375rem;
+  }
+  .topbar .navmenu {
+    min-height: 3rem;
+    display: flex;
+    margin: 0;
+  }
+  .topbar .navmenu .item {
+    display: inline-block;
+  }
+  .topbar .navmenu:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+  .topbar .navmenu:first-child {
+    margin-top: 0;
+  }
+  .topbar .navmenu:last-child {
+    margin-bottom: 0;
+  }
+  .topbar .navmenu .menu {
+    margin: 0;
+  }
+  .topbar .navmenu > .menu {
+    display: flex;
+  }
+  .topbar .navmenu .item {
+    align-items: center;
+    display: inline-block;
+  }
+
+  .topbar .navmenu:not(.vertical) .item:first-child {
+   // padding-left: 0;
+  }
+  .topbar .navmenu:not(.vertical) .item:last-child {
+   // padding-right: 0;
+  }
+  .topbar .navmenu .item > i.icon {
+      opacity: .9;
+      float: none;
+      margin: 0 .5rem 0 0;
+  }
+  .topbar .navmenu .right.item, 
+  .topbar .navmenu .right.menu {
+      display: flex;
+      margin-left: auto!important;
+  }
+  
+}
+
+
+/****************************
+****** Header Styles ********
+****************************/
+.hero { 
+  margin: 4rem 0 6rem 0;
+  text-align: center;
+}
+.hero .heading {
+  color: white;
+  font-weight: normal;
+  font-size: 2rem;
+}
+.hero .heading:before {
+  background: #FFF;
+}
+
+/****************************
+****** Section Styles *******
+****************************/
+.main {
+  text-align: left;
+}
+.section {
+  background: #FFF;
+  padding: 2rem 1rem;
+  margin: 0 1rem 2rem 1rem;
+}
+
+.section .heading {
+  font-size: 1.7rem;
+  margin: 0 0 4rem 0;
+  padding: 0;
+  line-height: 2rem;
+  text-align: center;
+}
+.section .subheading {
+  text-align: center;
+}
+.section.callout {
+  background: #012e58;
+  text-align: center;
+}
+.section.callout .subheading {
+  color: #FFF;
+  text-align: center;
+}
+.section.callout .button {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/****************************
+****** Modular Styles *******
+****************************/
+.form-zipsearch {
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+.form-zipsearch .button  {
+  margin-left: 1rem;
+}
+.input-group input {
+  height: 3.7rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  border-radius: 5px;
+  border: 1px solid #adadad;
+}
+.input-group .button {
+  font-size: 1.2rem;
+}
+
+/****************************
+****** Footer Styles ********
+****************************/
+.footer {
+  margin: 0 1rem;
+}
+.footer .container {
+  background-color: transparent;
+
+}
+.footer .heading {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+.navlist {
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+.navlist li {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.navlist li > a {
+  display: block;
+  border-bottom: 1px solid #FFF;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+  position: relative;
+}
+.navlist li:first-child > a {
+  border-top: 1px solid #FFF;  
+}
+.navlist li > a .icon-arrow-right {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.6279296875em;
+}
+/****************************
+****** Helper Styles ********
+****************************/
+.align-right {
+  text-align: right;
+}
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+/* Browser upgrade prompt */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}

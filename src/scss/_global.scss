@@ -1,0 +1,86 @@
+
+/* The following code will not show up in the document, but will let 
+/* JavaScript know which breakpoint is currently being used.
+/* Source: https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript */
+
+body:before {
+  content: "mobile";
+  display: none;
+}
+@media (min-width: 40em) {
+  body:before {
+    content: "tablet";
+  }
+}
+@media (min-width: 64em) {
+  body:before {
+    content: "desktop";
+  }
+}
+
+
+/****************************
+****** Global Styles ********
+****************************/
+html {
+  background-image: url(../images/striped-pattern.png);
+  background-repeat: repeat-x;
+  background-size: auto 20rem;
+  background-color: #EEE;
+  text-align: center;
+}
+
+html:before {
+  /*
+  position: absolute;
+  height: 10rem;
+  width: 100%;
+  z-index: -1;
+  content: "";
+  display: block;
+ */
+}
+.box {
+  background: #adadad;
+  display: block;
+  width: 100%;
+  height: 10rem;
+  color: #FFF;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: inherit;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility; 
+}
+
+a {
+  color: #0067b4;
+}
+section .heading,
+.section .heading {
+  position: relative;
+  font-weight: normal;
+}
+section .heading:before,
+.section .heading:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #40c0b1;
+  text-align: center;
+  bottom: -2rem;
+  left: 50%;
+  margin: 0 0 0 -50px;
+}
+
+section .subheading,
+.section .subheading {
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+

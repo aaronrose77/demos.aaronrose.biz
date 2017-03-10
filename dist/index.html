@@ -1,34 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="">
 <head>
-<title>The portfolio of Aaron Rose</title>
-<meta charset="UTF-8">
+<meta charset="utf8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Responsive Demo</title>
+<meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="css/vendor/normalize.css">
 <link rel="stylesheet" href="css/main.css">
-<script src="js/app.js"></script>
 </head>
 <body>
-
-<div class="header">
+  <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+<nav id="topbar" class="topbar">  
   <div class="container">
-    <h1><a class="logo"></a><span>demos.aaronrose.biz</span></h1>
-  </div>
-</div>
-
-<div class="main">
-  <div class="container">
-    <div class="section">
-      <h1 class="heading-1">Welcome to aaronrose.biz</h1>
-      <h4>Hello! What's up?</h4>
+    <div class="navmenu fixed">
+        <div class="left menu">
+          <div class="item dropdown benefits">
+            <a class="dropdown-trigger" href="javascript:void(0);">Benefits<span class="icon-wrap"><svg class="icon icon-arrow-down"><use xlink:href="images/symbol-defs.svg#icon-arrow-down"></use></svg></span></a>
+            <div class="menu dropdown-content">
+              <div class="item"><a href="javascript:void(0);">Benefits 1</a></div>
+              <div class="item"><a href="javascript:void(0);">Benefits 2</a></div>
+              <div class="item"><a href="javascript:void(0);">Benefits 3</a></div>
+            </div>           
+          </div>
+          <div class="item dropdown care">
+            <a class="dropdown-trigger" href="javascript:void(0);">Care<span class="icon-wrap"><svg class="icon icon-arrow-down"><use xlink:href="images/symbol-defs.svg#icon-arrow-down"></use></svg></span></a>
+            <div class="menu dropdown-content">
+              <div class="item"><a href="javascript:void(0);">Care 1</a></div>
+              <div class="item"><a href="javascript:void(0);">Care 2</a></div>
+              <div class="item"><a href="javascript:void(0);">Care 3</a></div>
+            </div>            
+          </div>
+          <div class="item dropdown support">
+            <a class="dropdown-trigger" href="javascript:void(0);">Support<span class="icon-wrap"><svg class="icon icon-arrow-down"><use xlink:href="images/symbol-defs.svg#icon-arrow-down"></use></svg></span></a>
+            <div class="menu dropdown-content">
+              <div class="item"><a href="javascript:void(0);">Contact Us</a></div>
+              <div class="item"><a href="javascript:void(0);">Am I eligible?</a></div>
+              <div class="item"><a href="javascript:void(0);">Frequently Asked Questions</a></div>
+              <div class="item"><a href="javascript:void(0);">Community Support</a></div>
+            </div>            
+          </div>
+        </div>
+        <div class="right menu">
+          <div class="item" href="javascript:void(0);"><a href="javascript:void(0);"><svg class="icon icon-font-zoom"><use xlink:href="images/symbol-defs.svg#icon-font-zoom"></use></svg></a></div>
+          <div class="item login"><a href="javascript:void(0);">Login</a></div>
+        </div>
     </div>
   </div>
-</div>
+  <span id="menu-trigger" class="menu-trigger"></span>
+</nav>
 
-<div class="footer">
+<header class="hero">
   <div class="container">
+    <h1 class="heading">Sample Content Page</h1>
+    <!-- <span class="divider"></span> -->
+  </div>
+</header>
+
+<article class="main">
+  <div class="container">
+    <section class="section">
+      <h2 class="heading">Community Resource Link</h2>
+      <h3 class="subheading">Get help finding food, jobs, housing, or other things you may need.</h3>
+      <!--
+      <form class="form-zipsearch">
+        <div class="input-group">
+          <input class="input-group-field zip" type="text" name="zip" maxlength="5" placeholder="Zip">
+          <div class="input-group-button">
+            <input type="submit" class="button" value="Search">
+          </div>
+        </div>
+      </form>
+      -->
+    </section>
+
+    <section class="section">
+      <h2 class="heading">More support from your community</h2>
+      <div class="align-left">
+        <ul class="list bulleted">
+          <li><a href="javascript:void();">National Domestic Violence Hotline</a> &mdash; Call 1-800-799-7233.</li>
+          <li><a href="javascript:void();">Indiana Poision Center</a> &mdash; Call 1-800-222-1222.</li>
+          <li><a href="javascript:void();">Indiana 2-1-1</a> &mdash; A free, 24-hour service, connectiong you to food, shelter and housing assistance, employment services, counseling services and much more. Call 2-1-1.</li>
+          <li><a href="javascript:void();">Gateway to Work</a> &mdash; A free, optional program to help you build the skills you need to get new or better jobs.</li>
+          <li><a href="javascript:void();">Indiana Tobocco Outline</a> &mdash; A free support line to help you break the smoking habit. Call 1-800-QUIT-NOW (1-800-784-8669). Or select <strong>Click to Call</strong> on the Quitline homepage to have a specialist call you.</li>
+          <li><a href="javascript:void();">About Special Kids</a> &mdash; Indiana's parent-to-parent organization, offering advice and resources to families of children with special needs. Call 1-800-964-4746.</li>
+          <li><a href="javascript:void();">Autism Resource Network of Indiana</a> &mdash; Call 1-800-609-8449.</li>
+          <li><a href="javascript:void();">Autism Society of Indiana</a> &mdash; Call 1-800-609-8449.</li>
+          <li><a href="javascript:void();">National Poision Control Center</a> &mdash; Get free poision prevention advice and treatment. Call 1-800-222-1222.</li>
+          <li><a href="javascript:void();">Relay Indiana</a> &mdash; Call 1-800-743-3333 (TTY 711) if you have hearing or speech loss and a trained person will help you talk to someone who uses a standard phone.</li>
+          <li><a href="javascript:void();">Women, Infants, amd Children (WIC) program</a> &mdash; Offers healthy food to pregnant women and mothers of young children. Call 1-800-522-0874.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="section callout">
+      <h3 class="subheading">Visit the community at Online Peer Support today. And start to feel better.</h3>
+        <a class="button" href="javascript:void();">Online Peer Support</a>
+    </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row small-collapse">
+      <div class="medium-5 columns collapse">
+        <h4 class="heading">Benefit options</h4>
+        <ul class="navlist">
+          <li><a href="javascript:void();">Healthy Indiana Plan for low-income adults <svg class="icon icon-arrow-right"><use xlink:href="images/symbol-defs.svg#icon-arrow-right"></use></svg></a></li>
+          <li><a href="javascript:void();">Hoosier Healthwise for children and pregnant women <svg class="icon icon-arrow-right"><use xlink:href="images/symbol-defs.svg#icon-arrow-right"></use></svg></a></li>
+          <li><a href="javascript:void();">Hoosier Care Connect for those who are aged, blind, or with a disability <svg class="icon icon-arrow-right"><use xlink:href="images/symbol-defs.svg#icon-arrow-right"></use></svg></a></li>
+          <li><a href="javascript:void();">Tools to help you manage your condition <svg class="icon icon-arrow-right"><use xlink:href="images/symbol-defs.svg#icon-arrow-right"></use></svg></a></li>        
+        </ul>
+      </div>
+      <div class="medium-6 medium-offset-1 columns">
+        <h4 class="heading">Member tools</h4>
+        <ul class="navlist">
+          <li><a href="javascript:void();">Health needs screening: Get your $10 gift card <svg class="icon icon-arrow-right"><use xlink:href="images/symbol-defs.svg#icon-arrow-right"></use></svg></a></li>
+          <li><a href="javascript:void();">Renew your benefits <svg class="icon icon-arrow-right"><use xlink:href="images/symbol-defs.svg#icon-arrow-right"></use></svg></a></li>      
+        </ul>     
+      </div>
+    </div>
   </div> 
-</div>
+</footer>
 
-
+<script defer src="js/vendor/svgxuse.js"></script>
+<script src="js/app.min.js"></script>
 </body>
 </html>
+
+
+<!-- FOR REFERENCE ONLY! WILL BE REMOVED WHEN PAGE IS COMPLETE -->
+<!--
+<svg class="icon icon-menu"><use xlink:href="symbol-defs.svg#icon-menu"></use></svg><span class="name"> icon-menu</span>
+
+<svg class="icon icon-arrow-right"><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg><span class="name"> icon-arrow-right</span>
+
+<svg class="icon icon-bank"><use xlink:href="symbol-defs.svg#icon-bank"></use></svg><span class="name"> icon-bank</span>
+
+<svg class="icon icon-font-zoom"><use xlink:href="symbol-defs.svg#icon-font-zoom"></use></svg><span class="name"> icon-font-zoom</span>
+
+
+<svg class="icon icon-mastercard"><use xlink:href="symbol-defs.svg#icon-mastercard"></use></svg><span class="name"> icon-mastercard</span>
+
+<svg class="icon icon-minus-circle"><use xlink:href="symbol-defs.svg#icon-minus-circle"></use></svg><span class="name"> icon-minus-circle</span>
+
+<svg class="icon icon-plus-circle"><use xlink:href="symbol-defs.svg#icon-plus-circle"></use></svg><span class="name"> icon-plus-circle</span>
+
+<svg class="icon icon-exclamation-circle"><use xlink:href="symbol-defs.svg#icon-exclamation-circle"></use></svg><span class="name"> icon-exclamation-circle</span>
+-->

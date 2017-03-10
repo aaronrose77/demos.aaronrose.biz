@@ -1,0 +1,46 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  pointer-events: none; /* Fixes JS click events not working */
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-arrow-right {
+  width: 0.6279296875em;
+  color: #fe5e3c;
+}
+
+.icon-bank {
+  width: 1.0009765625em;
+}
+
+.icon-font-zoom {
+  width: 3.1689453125em;
+}
+
+.icon-mastercard {
+  width: 1.5em;
+}
+
+.icon-minus-circle {
+  width: 0.857421875em;
+}
+
+.icon-plus-circle {
+  width: 0.857421875em;
+}
+
+.icon-exclamation-circle {
+  width: 0.857421875em;
+}

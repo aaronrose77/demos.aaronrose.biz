@@ -1,0 +1,61 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-arrow-down {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-arrow-left {
+  width: 32px;
+  height: 32px;
+  background-position: -56px 0;
+}
+.icon-arrow-right {
+  width: 32px;
+  height: 32px;
+  background-position: -112px 0;
+}
+.icon-arrow-up {
+  width: 32px;
+  height: 32px;
+  background-position: -168px 0;
+}
+.icon-menu {
+  width: 32px;
+  height: 32px;
+  background-position: -224px 0;
+}
+.icon-bank {
+  width: 32px;
+  height: 32px;
+  background-position: -280px 0;
+}
+.icon-font-zoom {
+  width: 101px;
+  height: 32px;
+  background-position: -336px 0;
+}
+.icon-mastercard {
+  width: 48px;
+  height: 32px;
+  background-position: -504px 0;
+}
+.icon-minus-circle {
+  width: 27px;
+  height: 32px;
+  background-position: -616px 0;
+}
+.icon-plus-circle {
+  width: 27px;
+  height: 32px;
+  background-position: -672px 0;
+}
+.icon-exclamation-circle {
+  width: 27px;
+  height: 32px;
+  background-position: -728px 0;
+}
+
